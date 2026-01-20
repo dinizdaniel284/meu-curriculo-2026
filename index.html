@@ -3,221 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Diniz | Portfolio 2026</title>
+    <title>Daniel Diniz | Full Stack & Web3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+
         body { 
-            background-color: #010308; 
+            background-color: #020617; 
+            color: #f8fafc;
+            font-family: 'Space Grotesk', sans-serif;
             overflow-x: hidden;
-            margin: 0;
-            color: #e2e8f0;
         }
 
-        /* AURORA BOREAL EM MOVIMENTO */
-        .aurora-wrapper {
+        #particles-js {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle at 50% 0%, #002b2b 0%, #010308 70%);
-            overflow: hidden;
-        }
-
-        .aurora-canvas {
-            position: absolute;
-            width: 300%; 
-            height: 100%;
-            display: flex;
-            opacity: 0.5;
-            filter: blur(80px);
-            mix-blend-mode: hard-light;
-            animation: aurora-move 25s linear infinite;
-        }
-
-        .aurora-band {
-            flex: 1;
-            height: 100%;
-            background: linear-gradient(90deg, 
-                transparent, 
-                #06b6d4 15%, 
-                #a855f7 35%, 
-                #10b981 50%, 
-                transparent 80%);
-        }
-
-        @keyframes aurora-move {
-            from { transform: translateX(-50%); }
-            to { transform: translateX(0%); }
-        }
-
-        /* FOTO FLUTUANTE */
-        .floating {
-            animation: float-premium 5s ease-in-out infinite;
-        }
-
-        @keyframes float-premium {
-            0%, 100% { transform: translateY(0) rotate(0deg); filter: drop-shadow(0 0 20px rgba(6,182,212,0.2)); }
-            50% { transform: translateY(-15px) rotate(2deg); filter: drop-shadow(0 0 40px rgba(6,182,212,0.5)); }
-        }
-
-        /* EFEITO GLOW NOS CARDS */
-        .glass { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(20px); 
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glow-effect::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(6, 182, 212, 0.15), transparent 40%);
             z-index: 0;
             pointer-events: none;
         }
 
-        .card-content { position: relative; z-index: 1; }
-
-        .card-hover:hover {
-            border-color: rgba(6, 182, 212, 0.5);
-            box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
+        .glass { 
+            background: rgba(15, 23, 42, 0.6); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .skill-badge {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #94a3b8;
+        .glass:hover {
+            border-color: #06b6d4;
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
+            transform: translateY(-5px) scale(1.01);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cyber-badge {
+            background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Animação Neon de fundo */
+        .neon-sphere {
+            position: fixed;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(50px);
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(110%, 110%); }
         }
     </style>
 </head>
-<body class="font-sans">
+<body>
 
-    <div class="aurora-wrapper">
-        <div class="aurora-canvas">
-            <div class="aurora-band"></div>
-            <div class="aurora-band"></div>
-            <div class="aurora-band"></div>
-        </div>
-    </div>
+    <div id="particles-js"></div>
+    <div class="neon-sphere"></div>
 
-    <div class="max-w-4xl mx-auto px-6 py-12 relative">
-        <header class="flex flex-col md:flex-row items-center gap-10 mb-20 mt-10">
-            <div class="relative group floating">
-                <div class="w-52 h-52 rounded-[2.5rem] border-2 border-cyan-500/30 overflow-hidden bg-slate-900 shadow-2xl">
-                    <img src="assets/perfil.jpg" alt="Daniel Diniz" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Daniel+Diniz&background=06b6d4&color=fff&size=200'">
+    <div class="max-w-5xl mx-auto px-6 py-12 relative z-10">
+        
+        <header class="flex flex-col md:flex-row items-center gap-10 mb-20 pt-10">
+            <div class="relative group">
+                <div class="w-48 h-48 rounded-full border-2 border-cyan-500/50 p-2 group-hover:border-cyan-400 transition-all duration-500">
+                    <img src="assets/perfil.jpg" alt="Daniel Diniz" class="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all shadow-2xl" onerror="this.src='https://ui-avatars.com/api/?name=Daniel+Diniz&background=020617&color=06b6d4&size=200'">
                 </div>
-                <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-[10px] font-black px-4 py-2 rounded-lg uppercase tracking-widest shadow-2xl">
-                    ADS 2026
-                </div>
+                <div class="absolute -bottom-2 right-4 cyber-badge">Verified Dev 2026</div>
             </div>
 
             <div class="text-center md:text-left">
-                <h1 class="text-7xl font-black text-white mb-2 tracking-tighter italic bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500">
+                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter text-gradient mb-2">
                     Daniel Diniz
                 </h1>
-                <p class="text-cyan-400 font-mono mb-6 text-xl flex items-center justify-center md:justify-start gap-3">
-                    <span class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_#22d3ee]"></span> 
-                    Full Stack Developer
+                <p class="text-cyan-400 font-mono text-lg tracking-widest uppercase mb-4">
+                    Full Stack | Web3 & AI Architect
                 </p>
-                <p class="text-slate-400 max-w-lg leading-relaxed text-lg italic opacity-80">
-                    "Conectando back-end robusto a interfaces de alto impacto."
-                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <span class="text-xs border border-white/20 px-3 py-1 rounded-full bg-white/5">📍 São Paulo, Brazil</span>
+                    <span class="text-xs border border-cyan-500/30 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300">Available for Projects</span>
+                </div>
             </div>
         </header>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div class="glass p-6 rounded-3xl glow-effect card-hover md:col-span-2">
-                <div class="card-content">
-                    <h3 class="text-white font-bold mb-6 flex items-center gap-2">
-                        <span class="text-cyan-500">01.</span> Tech Stack & Core
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-badge text-cyan-400 border-cyan-500/20">React.js</span>
-                        <span class="skill-badge text-cyan-400 border-cyan-500/20">JavaScript ES6</span>
-                        <span class="skill-badge text-cyan-400 border-cyan-500/20">HTML5 / CSS3 / Tailwind</span>
-                        <span class="skill-badge text-emerald-400 border-emerald-500/20">MongoDB</span>
-                        <span class="skill-badge text-emerald-400 border-emerald-500/20">Integração de APIs REST</span>
-                        <span class="skill-badge text-emerald-400 border-emerald-500/20">Python</span>
-                        <span class="skill-badge text-purple-400 border-purple-500/20">Scrum</span>
-                        <span class="skill-badge text-purple-400 border-purple-500/20">Kanban</span>
-                    </div>
+        <h2 class="text-sm uppercase tracking-[0.5em] font-bold mb-8 text-slate-500 border-l-2 border-cyan-500 pl-4">Featured Protocols & Deployments</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+            
+            <div class="glass p-8 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <img src="https://cryptologos.cc/logos/polygon-matic-logo.png" width="30">
                 </div>
+                <h3 class="text-2xl font-bold mb-2">Consultoria NFT (ERC-721)</h3>
+                <p class="text-slate-400 text-sm mb-6">Smart contract em Solidity para tokenização de serviços de consultoria na rede Polygon.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Solidity</span>
+                    <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Polygon</span>
+                    <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Web3.js</span>
+                </div>
+                <a href="#" class="text-cyan-400 text-sm font-bold flex items-center gap-2 hover:underline">Explore Protocol ↗</a>
             </div>
 
-            <div class="glass p-6 rounded-3xl glow-effect card-hover">
-                <div class="card-content">
-                    <h3 class="text-white font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-widest">
-                        Foco em API
-                    </h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-mono">
-                        Especialista em realizar a ponte entre Front e Back, garantindo fluxo de dados otimizado e segurança.
-                    </p>
+            <div class="glass p-8 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" width="30">
                 </div>
+                <h3 class="text-2xl font-bold mb-2">Sales Intelligence IA</h3>
+                <p class="text-slate-400 text-sm mb-6">Motor de estratégia comercial utilizando Google Gemini API para análise preditiva de nichos.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[10px] bg-orange-500/20 text-orange-300 px-2 py-1 rounded">Next.js 15</span>
+                    <span class="text-[10px] bg-orange-500/20 text-orange-300 px-2 py-1 rounded">Gemini AI</span>
+                    <span class="text-[10px] bg-orange-500/20 text-orange-300 px-2 py-1 rounded">Supabase</span>
+                </div>
+                <a href="#" class="text-cyan-400 text-sm font-bold flex items-center gap-2 hover:underline">View System ↗</a>
             </div>
-        </section>
 
-        <section class="mb-16">
-            <h2 class="text-xs uppercase tracking-[0.5em] font-bold mb-8 text-slate-500">Professional Mindset</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass p-8 rounded-3xl glow-effect card-hover border-l-4 border-l-cyan-500">
-                    <div class="card-content">
-                        <h4 class="text-white font-bold mb-2">Visão Estratégica</h4>
-                        <p class="text-sm text-slate-400">Capacidade de entender o negócio para entregar soluções técnicas que realmente resolvem problemas reais.</p>
-                    </div>
-                </div>
-                <div class="glass p-8 rounded-3xl glow-effect card-hover border-l-4 border-l-purple-500">
-                    <div class="card-content">
-                        <h4 class="text-white font-bold mb-2">Colaboração Ágil</h4>
-                        <p class="text-sm text-slate-400">Fluência em ambientes Scrum/Kanban, priorizando comunicação clara e entregas contínuas em equipe.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
 
-        <section class="mb-20">
-            <div class="glass p-8 rounded-3xl glow-effect card-hover">
-                <div class="card-content">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-3xl font-bold text-white">TI Saúde</h3>
-                        <span class="text-cyan-400 text-[10px] border border-cyan-400/30 px-3 py-1 rounded-full uppercase font-bold tracking-widest">Live Project</span>
-                    </div>
-                    <p class="text-slate-400 mb-8 text-lg leading-relaxed">Desenvolvimento completo com foco em APIs e performance.</p>
-                    <a href="https://ti-saude.vercel.app/" target="_blank" class="inline-block bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-cyan-500 hover:text-white transition-all shadow-xl">Visualizar Case Study</a>
+        <section class="glass p-10 rounded-[3rem] mb-20">
+            <h3 class="text-3xl font-bold mb-10 text-center">Core Neural Stack</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-4xl font-bold text-white mb-2">99%</p>
+                    <p class="text-xs uppercase text-slate-500 font-bold tracking-widest">Uptime Architecture</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-cyan-500 mb-2">Web3</p>
+                    <p class="text-xs uppercase text-slate-500 font-bold tracking-widest">Smart Contracts</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-purple-500 mb-2">AI</p>
+                    <p class="text-xs uppercase text-slate-500 font-bold tracking-widest">Prompt Engineering</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-white mb-2">Next15</p>
+                    <p class="text-xs uppercase text-slate-500 font-bold tracking-widest">Performance Master</p>
                 </div>
             </div>
         </section>
 
-        <footer class="flex flex-col sm:flex-row justify-center gap-12 pt-12 border-t border-white/5">
-            <a href="https://github.com/dinizdaniel284" target="_blank" class="group flex items-center gap-3 text-slate-400 hover:text-white transition-all">
-                <span class="text-lg font-bold italic">Github</span>
-                <span class="w-8 h-[1px] bg-white/20 group-hover:w-16 group-hover:bg-cyan-500 transition-all"></span>
-            </a>
-            <a href="https://www.linkedin.com/in/daniel-diniz-186b52339" target="_blank" class="group flex items-center gap-3 text-slate-400 hover:text-white transition-all">
-                <span class="text-lg font-bold italic">LinkedIn</span>
-                <span class="w-8 h-[1px] bg-white/20 group-hover:w-12 group-hover:bg-purple-500 transition-all"></span>
-            </a>
+        <footer class="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-white/10">
+            <p class="text-slate-500 text-sm">© 2026 Designed for the Future.</p>
+            <div class="flex gap-8">
+                <a href="https://github.com/dinizdaniel284" class="hover:text-cyan-400 transition-colors font-bold uppercase text-xs tracking-widest">Github</a>
+                <a href="https://www.linkedin.com/in/daniel-diniz-186b52339" class="hover:text-purple-400 transition-colors font-bold uppercase text-xs tracking-widest">LinkedIn</a>
+            </div>
         </footer>
+
     </div>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        document.querySelectorAll('.glow-effect').forEach(card => {
-            card.onmousemove = e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty("--mouse-x", `${x}px`);
-                card.style.setProperty("--mouse-y", `${y}px`);
-            };
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#06b6d4" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.2 },
+                "size": { "value": 2 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#06b6d4",
+                    "opacity": 0.1,
+                    "width": 1
+                },
+                "move": { "enable": true, "speed": 1 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }
+                }
+            },
+            "retina_detect": true
         });
     </script>
-
 </body>
 </html>
