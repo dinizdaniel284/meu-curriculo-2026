@@ -4,6 +4,15 @@
 ### Software Engineering Student | Full Stack Developer & Data Analyst  
 
 <p align="center">
+  <a href="https://dinizdaniel284.github.io/meu-curriculo-2026" target="_blank">
+    <img src="https://img.shields.io/badge/🌐%20Currículo%20Online-00C7B7?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  <a href="https://github.com/dinizdaniel284" target="_blank">
+    <img src="https://img.shields.io/badge/💻%20GitHub%20Profile-000000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
@@ -37,13 +46,13 @@ Atualmente construo **produtos reais em produção**, aplicando boas práticas d
 
 ## 💻 Stack Tecnológica
 
-| Camada        | Tecnologias                                                                 |
-|---------------|------------------------------------------------------------------------------|
-| **Frontend**  | React, Next.js 15, TypeScript, Tailwind CSS, JavaScript (ES6+)               |
-| **Backend**   | Python, Java, APIs REST, Supabase (PostgreSQL)                               |
-| **Cloud**     | Vercel, Render, AWS (em estudo)                                              |
-| **Data & BI** | Power BI, Power Query, ETL                                                   |
-| **Ferramentas** | Git, GitHub, Jira, Figma                                                   |
+| Camada          | Tecnologias                                                                 |
+|------------------|------------------------------------------------------------------------------|
+| **Frontend**     | React, Next.js 15, TypeScript, Tailwind CSS, JavaScript (ES6+)               |
+| **Backend**      | Python, Java, APIs REST, Supabase (PostgreSQL)                               |
+| **Cloud**        | Vercel, Render, AWS (em estudo)                                              |
+| **Data & BI**    | Power BI, Power Query, ETL                                                   |
+| **Ferramentas**  | Git, GitHub, Jira, Figma                                                     |
 
 ---
 
@@ -92,13 +101,13 @@ HTML5 • CSS Grid & Flexbox • SEO
 ## 🤝 Conecte-se Comigo
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/daniel-diniz-186b52339">
+  <a href="https://www.linkedin.com/in/daniel-diniz-186b52339" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:dinizdaniel284@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://github.com/dinizdaniel284">
+  <a href="https://github.com/dinizdaniel284" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white" />
   </a>
 </p>
