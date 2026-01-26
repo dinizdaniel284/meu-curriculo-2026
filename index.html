@@ -1,170 +1,263 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Diniz | Full Stack & Web3 Intelligence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Diniz | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        body { 
-            background-color: #020617; 
-            color: #f8fafc;
-            font-family: 'Space Grotesk', sans-serif;
-            overflow-x: hidden;
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
-        #particles-js {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
+    body {
+      background-color: #020617;
+      color: #f8fafc;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+    }
 
-        /* EFEITO GLASSMOPHISM AVANÇADO */
-        .glass { 
-            background: rgba(15, 23, 42, 0.7); 
-            backdrop-filter: blur(15px); 
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-        }
+    #particles-js {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
 
-        .glass:hover {
-            border-color: rgba(6, 182, 212, 0.5);
-            box-shadow: 0 0 50px rgba(6, 182, 212, 0.15);
-            transform: translateY(-8px);
-        }
+    .glass {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all .5s cubic-bezier(0.23,1,0.32,1);
+    }
 
-        .text-gradient {
-            background: linear-gradient(to bottom right, #fff 30%, #64748b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .glass:hover {
+      border-color: rgba(6,182,212,.5);
+      box-shadow: 0 0 50px rgba(6,182,212,.15);
+      transform: translateY(-8px);
+    }
 
-        /* ANIMAÇÃO DE SCANNER NA FOTO */
-        .scanner-photo {
-            position: relative;
-            overflow: hidden;
-        }
+    .text-gradient {
+      background: linear-gradient(to bottom right, #fff 30%, #64748b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .scanner-photo::after {
-            content: "";
-            position: absolute;
-            top: -100%; left: 0; width: 100%; height: 20%;
-            background: linear-gradient(to bottom, transparent, rgba(6, 182, 212, 0.5), transparent);
-            animation: scanning 3s infinite;
-        }
+    .scanner-photo {
+      position: relative;
+      overflow: hidden;
+    }
 
-        @keyframes scanning {
-            0% { top: -100%; }
-            100% { top: 200%; }
-        }
+    .scanner-photo::after {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 20%;
+      background: linear-gradient(to bottom, transparent, rgba(6,182,212,.5), transparent);
+      animation: scanning 3s infinite;
+    }
 
-        .cyber-card-header {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: #06b6d4;
-            letter-spacing: 2px;
-        }
-    </style>
+    @keyframes scanning {
+      0% { top: -100%; }
+      100% { top: 200%; }
+    }
+
+    .cyber-card-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #06b6d4;
+      letter-spacing: 2px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <div id="particles-js"></div>
+<div id="particles-js"></div>
 
-    <div class="max-w-6xl mx-auto px-6 py-12 relative z-10">
-        
-        <header class="flex flex-col md:flex-row items-center gap-12 mb-24 mt-10">
-            <div class="relative group scanner-photo">
-                <div class="w-56 h-56 rounded-[3rem] border-2 border-cyan-500/20 p-2 rotate-3 group-hover:rotate-0 transition-all duration-700">
-                    <img src="assets/perfil.jpg" alt="Daniel Diniz" class="w-full h-full rounded-[2.5rem] object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Daniel+Diniz&background=020617&color=06b6d4&size=250'">
-                </div>
-                <div class="absolute -top-4 -left-4 bg-cyan-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">
-                    System Online
-                </div>
-            </div>
+<div class="max-w-7xl mx-auto px-6 py-12 relative z-10">
 
-            <div class="text-center md:text-left">
-                <h1 class="text-7xl md:text-9xl font-bold tracking-tighter text-gradient mb-4">
-                    Daniel Diniz
-                </h1>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start items-center">
-                    <p class="text-cyan-400 font-mono text-xl tracking-tighter italic">
-                        Full Stack & Web3 Architect
-                    </p>
-                    <span class="h-1 w-12 bg-slate-700 rounded-full"></span>
-                    <p class="text-slate-500 font-mono text-sm uppercase tracking-widest">ADS 2026 / Blockchain Dev</p>
-                </div>
-            </div>
-        </header>
+  <!-- HEADER -->
+  <header class="flex flex-col md:flex-row items-center gap-12 mb-24 mt-10">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="glass p-8 rounded-[2rem] md:col-span-2 border-l-4 border-l-purple-600">
-                <span class="cyber-card-header">BLOCKCHAIN PROTOCOL_V1</span>
-                <h3 class="text-4xl font-bold mt-4 mb-4 text-white">Consultoria NFT Ecosystem</h3>
-                <p class="text-slate-400 leading-relaxed mb-6 italic">
-                    Tokenização de serviços intelectuais utilizando a rede Polygon. Implementação de contratos inteligentes ERC-721 com governança descentralizada.
-                </p>
-                <div class="flex gap-3">
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-lg uppercase">Solidity ^0.8.20</span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-lg uppercase">Polygon Network</span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-lg uppercase">Smart Contracts</span>
-                </div>
-            </div>
+    <div class="relative group scanner-photo">
+      <div class="w-56 h-56 rounded-[3rem] border-2 border-cyan-500/20 p-2 rotate-3 group-hover:rotate-0 transition-all duration-700">
+        <img src="assets/perfil.jpg"
+             alt="Daniel Diniz"
+             class="w-full h-full rounded-[2.5rem] object-cover"
+             onerror="this.src='https://ui-avatars.com/api/?name=Daniel+Diniz&background=020617&color=06b6d4&size=250'">
+      </div>
 
-            <div class="glass p-8 rounded-[2rem] border-r-4 border-r-orange-500">
-                <span class="cyber-card-header">AI_ENGINE.EXE</span>
-                <h3 class="text-2xl font-bold mt-4 mb-4 text-white">Sales IA Engine</h3>
-                <p class="text-xs text-slate-500 font-mono leading-relaxed mb-6">
-                    [LOG]: Integrando Google Gemini API v1.5 para geração de estratégias de marketing preditivas com 98% de precisão de nicho.
-                </p>
-                <a href="https://github.com/dinizdaniel284/meu-sistema-vendas" target="_blank" class="block w-full text-center py-3 bg-white text-black font-bold rounded-xl hover:bg-orange-500 hover:text-white transition-all">DECRYPT CODE</a>
-            </div>
-
-        </div>
-
-        <section class="mb-24">
-            <h2 class="text-xs uppercase tracking-[0.5em] font-bold mb-12 text-slate-600 text-center">Neural Tech Stack Connection</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <div class="glass px-8 py-4 rounded-2xl text-cyan-400 font-bold tracking-widest border-cyan-500/20">NEXT.JS 15</div>
-                <div class="glass px-8 py-4 rounded-2xl text-purple-400 font-bold tracking-widest border-purple-500/20">SOLIDITY</div>
-                <div class="glass px-8 py-4 rounded-2xl text-emerald-400 font-bold tracking-widest border-emerald-500/20">MONGODB</div>
-                <div class="glass px-8 py-4 rounded-2xl text-orange-400 font-bold tracking-widest border-orange-500/20">GEMINI AI</div>
-                <div class="glass px-8 py-4 rounded-2xl text-blue-400 font-bold tracking-widest border-blue-500/20">TYPESCRIPT</div>
-            </div>
-        </section>
-
-        <footer class="flex flex-col md:flex-row justify-between items-center py-12 border-t border-white/5 gap-8">
-            <div class="font-mono text-[10px] text-slate-600 uppercase tracking-[0.3em]">
-                Built in 2026 // Decentralized World
-            </div>
-            <div class="flex gap-12">
-                <a href="https://github.com/dinizdaniel284" target="_blank" class="text-sm font-black italic hover:text-cyan-400 transition-colors tracking-widest">GITHUB_</a>
-                <a href="https://www.linkedin.com/in/daniel-diniz-186b52339" target="_blank" class="text-sm font-black italic hover:text-purple-400 transition-colors tracking-widest">LINKEDIN_</a>
-            </div>
-        </footer>
+      <div class="absolute -top-4 -left-4 bg-cyan-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">
+        System Online
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#06b6d4" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.2 },
-                "size": { "value": 1.5 },
-                "line_linked": { "enable": true, "distance": 150, "color": "#06b6d4", "opacity": 0.1, "width": 1 },
-                "move": { "enable": true, "speed": 0.8, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
-            },
-            "interactivity": {
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } }
-            },
-            "retina_detect": true
-        });
-    </script>
+    <div class="text-center md:text-left">
+      <h1 class="text-7xl md:text-9xl font-bold tracking-tighter text-gradient mb-4">
+        Daniel Diniz
+      </h1>
+
+      <div class="flex flex-wrap gap-4 justify-center md:justify-start items-center">
+        <p class="text-cyan-400 font-mono text-xl tracking-tighter italic">
+          Software Engineering Student • Full Stack Developer
+        </p>
+        <span class="h-1 w-12 bg-slate-700 rounded-full"></span>
+        <p class="text-slate-500 font-mono text-sm uppercase tracking-widest">
+          ADS 2025–2027 • Systems & Data
+        </p>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ABOUT -->
+  <section class="mb-24">
+    <div class="glass p-10 rounded-[2.5rem] border-l-4 border-l-cyan-500">
+      <span class="cyber-card-header">ABOUT_PROFILE.SYS</span>
+      <h2 class="text-4xl font-bold mt-4 mb-6">Career Transition into Technology</h2>
+
+      <p class="text-slate-400 leading-relaxed max-w-3xl">
+        Technology enthusiast in career transition, building real-world products focused on performance,
+        architecture, SEO, and user experience.  
+        Strong analytical mindset from BI and Data Analysis applied to modern Full Stack development.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="mb-24">
+    <h2 class="text-xs uppercase tracking-[0.5em] font-bold mb-12 text-slate-600 text-center">
+      Featured Projects
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- TI-SAÚDE -->
+      <div class="glass p-8 rounded-[2rem] border-t-4 border-t-cyan-500">
+        <span class="cyber-card-header">PROJECT_001</span>
+        <h3 class="text-2xl font-bold mt-4 mb-3">TI-Saúde Platform</h3>
+
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Web platform focused on IT + Healthcare niche, SEO optimized, production-ready and performance driven.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-bold rounded-lg uppercase">Next.js 15</span>
+          <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-bold rounded-lg uppercase">TypeScript</span>
+          <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-bold rounded-lg uppercase">SEO</span>
+        </div>
+
+        <a href="https://ti-saude.vercel.app/" target="_blank"
+           class="block w-full text-center py-3 bg-cyan-500 text-black font-bold rounded-xl hover:bg-white transition-all">
+          VIEW PROJECT
+        </a>
+      </div>
+
+      <!-- SISTEMA VENDAS -->
+      <div class="glass p-8 rounded-[2rem] border-t-4 border-t-orange-500">
+        <span class="cyber-card-header">PROJECT_002</span>
+        <h3 class="text-2xl font-bold mt-4 mb-3">AI Sales System</h3>
+
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Landing page generator and sales automation system using Gemini AI + Supabase backend.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[10px] font-bold rounded-lg uppercase">Next.js</span>
+          <span class="px-3 py-1 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[10px] font-bold rounded-lg uppercase">Supabase</span>
+          <span class="px-3 py-1 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-[10px] font-bold rounded-lg uppercase">Gemini AI</span>
+        </div>
+
+        <a href="https://meu-sistema-vendas.vercel.app/" target="_blank"
+           class="block w-full text-center py-3 bg-orange-500 text-black font-bold rounded-xl hover:bg-white transition-all">
+          VIEW PROJECT
+        </a>
+      </div>
+
+      <!-- ACTUS -->
+      <div class="glass p-8 rounded-[2rem] border-t-4 border-t-purple-500">
+        <span class="cyber-card-header">PROJECT_003</span>
+        <h3 class="text-2xl font-bold mt-4 mb-3">Actus Prototype</h3>
+
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Corporate website prototype focused on semantic HTML5, SEO, and modern layout structure.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-lg uppercase">HTML5</span>
+          <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-lg uppercase">CSS Grid</span>
+          <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-lg uppercase">SEO</span>
+        </div>
+
+        <a href="https://prototipo-actus.vercel.app/" target="_blank"
+           class="block w-full text-center py-3 bg-purple-500 text-black font-bold rounded-xl hover:bg-white transition-all">
+          VIEW PROJECT
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="mb-24">
+    <h2 class="text-xs uppercase tracking-[0.5em] font-bold mb-12 text-slate-600 text-center">
+      Tech Stack
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="glass px-8 py-4 rounded-2xl text-cyan-400 font-bold tracking-widest border-cyan-500/20">NEXT.JS</div>
+      <div class="glass px-8 py-4 rounded-2xl text-blue-400 font-bold tracking-widest border-blue-500/20">TYPESCRIPT</div>
+      <div class="glass px-8 py-4 rounded-2xl text-emerald-400 font-bold tracking-widest border-emerald-500/20">MONGODB</div>
+      <div class="glass px-8 py-4 rounded-2xl text-orange-400 font-bold tracking-widest border-orange-500/20">GEMINI AI</div>
+      <div class="glass px-8 py-4 rounded-2xl text-purple-400 font-bold tracking-widest border-purple-500/20">TAILWIND</div>
+      <div class="glass px-8 py-4 rounded-2xl text-slate-400 font-bold tracking-widest border-slate-500/20">POWER BI</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="flex flex-col md:flex-row justify-between items-center py-12 border-t border-white/5 gap-8">
+    <div class="font-mono text-[10px] text-slate-600 uppercase tracking-[0.3em]">
+      Built in 2026 // Systems & Data
+    </div>
+
+    <div class="flex gap-12">
+      <a href="https://github.com/dinizdaniel284" target="_blank"
+         class="text-sm font-black italic hover:text-cyan-400 transition-colors tracking-widest">
+        GITHUB_
+      </a>
+      <a href="https://www.linkedin.com/in/daniel-diniz-186b52339" target="_blank"
+         class="text-sm font-black italic hover:text-purple-400 transition-colors tracking-widest">
+        LINKEDIN_
+      </a>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 100, density: { enable: true, value_area: 800 } },
+      color: { value: "#06b6d4" },
+      shape: { type: "circle" },
+      opacity: { value: 0.2 },
+      size: { value: 1.5 },
+      line_linked: { enable: true, distance: 150, color: "#06b6d4", opacity: 0.1, width: 1 },
+      move: { enable: true, speed: 0.8, random: true, out_mode: "out" }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
 </body>
-</html>
+            </html>
